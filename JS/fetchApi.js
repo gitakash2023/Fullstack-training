@@ -1,10 +1,18 @@
 const fetchProductsData =async()=>{
    try{
-    const response =await fetch("https://fakestoreapi.com/products")
+    //  jab data successfully fetch hokr aa jaye to try block likhte hai-> success
+    const response =await fetch("https://fakestoreapi.com/products") 
+    //  baseURL ->https://fakestoreapi.com
+   //  endPoint-> products
+//     API -> frontend backend k beech communication stablish krne ke liye
     const jsonData  = await  response.json()
     console.log("This is fetched Data",jsonData)
    }catch(error){
+    //  jab reject ho jaye mtlb data n aaaye  -> reject
     console.log(error)
+   }finally{
+    //  chahe  success ho chahe reject ho y vala blockm ka code  cle 
+
    }
 
 }
